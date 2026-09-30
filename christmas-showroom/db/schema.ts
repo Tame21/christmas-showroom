@@ -1,0 +1,4 @@
+import { sqliteTable,text,integer,real,uniqueIndex } from 'drizzle-orm/sqlite-core';
+export const products=sqliteTable('products',{id:text('id').primaryKey(),name:text('name').notNull(),model:text('model').notNull(),category:text('category').notNull(),height:real('height').notNull(),width:real('width').notNull(),material:text('material').notNull(),lighting:text('lighting').notNull(),description:text('description').notNull(),subtitle:text('subtitle').notNull(),images:text('images').notNull(),published:integer('published').notNull().default(0),demo:integer('demo').notNull().default(0),sortOrder:integer('sort_order').notNull().default(0),updatedAt:text('updated_at').notNull()},t=>[uniqueIndex('idx_products_model').on(t.model)]);
+export const settings=sqliteTable('settings',{key:text('key').primaryKey(),value:text('value').notNull()});
+export const adminIdentity=sqliteTable('admin_identity',{id:text('id').primaryKey(),userId:text('user_id').notNull()});

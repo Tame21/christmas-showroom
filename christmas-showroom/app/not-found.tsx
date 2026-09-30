@@ -1,0 +1,2 @@
+import { Header,Footer } from '@/components/site-chrome';
+export default function NotFound(){return <><Header/><main className="state-page"><p className="eyebrow">404 / PRODUCT NOT FOUND</p><h1>这件展品暂时不在展厅</h1><p>产品可能已下架或删除，来看看其他圣诞树吧。</p><a className="primary-button" href="/">返回产品展厅</a></main><Footer/></>;}

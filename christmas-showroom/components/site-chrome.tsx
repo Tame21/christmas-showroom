@@ -1,0 +1,3 @@
+import { TreePine,Settings2,Sparkles } from 'lucide-react';
+export function Header({admin=false}:{admin?:boolean}){return <><div className="announcement"><Sparkles size={13}/>让每一个圣诞，都值得期待<span>FULY CHRISTMAS COLLECTION</span></div><header className="site-header"><a href="/" className="brand"><TreePine/><span>fuly<small>圣诞树</small></span></a><nav><a className={!admin?'active':''} href="/">产品展厅</a><a href="/admin" className={'admin-link '+(admin?'active':'')}><Settings2 size={16}/>后台管理</a></nav></header></>;}
+export function Footer(){return <footer><a href="/" className="footer-wordmark">fuly<span>圣诞树</span></a><p>每一棵树，都是节日的开始。</p><span>© 2026 FULY CHRISTMAS</span></footer>;}
